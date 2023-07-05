@@ -1,23 +1,61 @@
-function suma(){
-    let numero1 = parseInt(prompt('Ingrese un numero'));
-    let numero2 = parseInt(prompt('mas'));
-    
-    console.log(alert(numero1 + numero2));
+let jugador;
+let maquina;
+
+function aleatorio(){
+    return Math.ceil(Math.random()*3);
+}
+jugador = prompt('Elegi: 1-Piedra  2-Papel  3-Tijera');
+maquina = aleatorio(); 
+alert('Tu elegiste: ' + eleccion(jugador));
+alert('La maquina eligio: ' + eleccion(maquina));
+
+function resultados(){
+    switch (contador = ''){
+        case jugador = maquina:{   
+            alert("EMPATE");   
+            break;
+        }
+        case console.log(jugador == 1 && maquina == 3):{ 
+            alert("GANASTE");   
+            break;
+        }
+        case console.log(jugador == 2 && maquina == 1):{  
+            alert("GANASTE");   
+            break;
+        }
+        case console.log(jugador == 3 && maquina == 2):{  
+            alert("GANASTE");   
+            break;
+        }
+        default:{
+            alert(" PERDISTE");
+            break;
+        }
+    }
+    // Dejo este comentario porque no puedo definir bien el switch para que me de la opción correcta, porque solo funciona con el DEFAULT.
+    // Puedo hacer un IF (que se que me funciona) antes de un SWITCH,  queria usar el ciclo.
+}
+resultados();
+
+function eleccion(jugada){
+    let resultado = '';
+    if (jugada == 1){
+        resultado = 'Piedra';        
+    }else if (jugada == 2){
+        resultado = 'Papel';
+    }else if (jugada == 3){
+        resultado = 'Tijera';
+    }else{
+        resultado = 'Tu eleción es incorrecta';
+    }
+    return resultado;
 }
 
-suma();
 
 
 
-
-
-
-
-
-
-
-
-
+// DESDE UN PRINCIPIO QUERIA HACER TIPO UN PROGRAMA QUE TE DIGA QUE SIGNO ZODIACAL TENES CON TU DIA/MES
+// PERO NO PUDE ENTENDER BIEN LOS COGIDOS PARA QUE ME QUEDEN BIEN
 
 
 // let nombre = prompt("Ingrese su nombre");
